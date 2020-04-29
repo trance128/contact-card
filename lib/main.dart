@@ -9,14 +9,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.deepPurple[50],
+        backgroundColor: Color.fromRGBO(93, 0, 30, 1),
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              Container(
-                width: double.infinity,
-              ),
               CircleAvatar(
                 radius: 75,
                 child: ClipRRect(
@@ -33,12 +31,62 @@ class MyApp extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 40,
                   fontFamily: 'Satisfy',
+                  color: Color.fromRGBO(227, 226, 223, 1),
                 ),
               ),
               Text(
                 'Flutter Developer',
-                style: TextStyle(fontSize: 30, fontFamily: 'EBGaramond'),
+                style: TextStyle(
+                    fontSize: 28,
+                    fontFamily: 'EBGaramond',
+                    letterSpacing: 7,
+                    color: Colors.white),
               ),
+              SizedBox(
+                height: 20,
+                width: 250,
+                child: Divider(color: Colors.white),
+              ),
+              Card(
+                margin:
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Color.fromRGBO(93, 0, 30, 1),
+                  ),
+                  title: Text(
+                    '07938 490 926',
+                    style: TextStyle(
+                        fontFamily: 'EBGaramond',
+                        fontSize: 20,
+                        color: Color.fromRGBO(93, 0, 30, 1),
+                        letterSpacing: 1.5),
+                  ),
+                ),
+              ),
+              Card(
+                margin: const EdgeInsets.symmetric(
+                  vertical: 10,
+                  horizontal: 25,
+                ),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Color.fromRGBO(93, 0, 30, 1),
+                  ),
+                  title: Text(
+                    'ovidiu.mazuru@gmail.com',
+                    style: TextStyle(
+                      fontFamily: 'EBGaramond',
+                      fontSize: 20,
+                      color: Color.fromRGBO(93, 0, 30, 1),
+                      letterSpacing: 1.5,
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(height: 75),
             ],
           ),
         ),
